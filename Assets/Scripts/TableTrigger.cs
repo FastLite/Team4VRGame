@@ -15,4 +15,11 @@ public class TableTrigger : MonoBehaviour
     {
         
     }
+     void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Teddybear")
+        { Debug.Log("Teddybear is in plaace");
+
+        }
+    }
 }
