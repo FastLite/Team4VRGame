@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class TableTrigger : MonoBehaviour
 {
+    private TableManager TableMNGR;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        TableMNGR = FindObjectOfType<TableManager>();
     }
 
     // Update is called once per frame
@@ -15,11 +16,20 @@ public class TableTrigger : MonoBehaviour
     {
         
     }
-     void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Teddybear")
-        { Debug.Log("Teddybear is in plaace");
+    
 
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Plates")
+        {
+            //Debug.Log("Teddybear is in plaace");
+            TableMNGR.increaseplate();
         }
+    }
+
+    void plateOnTrrigger()
+    {
+
     }
 }
