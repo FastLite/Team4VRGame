@@ -10,13 +10,13 @@ public class TableManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+
     }
 
     public void increaseplate()
@@ -27,5 +27,10 @@ public class TableManager : MonoBehaviour
         {
             plateText.text = "four plates were placed";
         }
+    }
+    public void Decreaseplate()
+        {
+        plates -= 1;
+       
     }
 }

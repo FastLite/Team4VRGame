@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TableTrigger : MonoBehaviour
 {
+    public bool isPlateIn;
     private TableManager TableMNGR;
     // Start is called before the first frame update
     private void Awake()
@@ -28,8 +29,12 @@ public class TableTrigger : MonoBehaviour
         }
     }
 
-    void plateOnTrrigger()
-    {
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Plates")
+        {
+            TableMNGR.Decreaseplate();
+        }
     }
 }
