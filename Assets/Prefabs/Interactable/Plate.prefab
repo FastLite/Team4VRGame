@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6688087565370430048}
   m_Layer: 0
   m_Name: Plate
-  m_TagString: Untagged
+  m_TagString: Plates
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,8 +125,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6875505, y: 0.082160234, z: 1.7463946}
-  m_Center: {x: 0.019515753, y: 0.08313, z: 0.009342432}
+  m_Size: {x: 1.6875505, y: 0.1633966, z: 1.7463946}
+  m_Center: {x: 0.019515753, y: 0.04251182, z: 0.009342432}
 --- !u!114 &762467019321079203
 MonoBehaviour:
   m_ObjectHideFlags: 0
