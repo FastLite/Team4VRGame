@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CupTrrigger : MonoBehaviour
+public class CupTrigger : MonoBehaviour
 {
     public bool isCupIn;
     private TableManager TableMNGR;
