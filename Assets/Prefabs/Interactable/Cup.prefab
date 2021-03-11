@@ -91,9 +91,10 @@ GameObject:
   - component: {fileID: 9079655976372603345}
   - component: {fileID: 3161684126402198695}
   - component: {fileID: 6601576679599515168}
+  - component: {fileID: 4200275815951468676}
   m_Layer: 0
   m_Name: Cup
-  m_TagString: Untagged
+  m_TagString: Teacups
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,6 +237,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
+--- !u!65 &4200275815951468676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269296007242472633}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3564851, y: 0.9331441, z: 1.9325876}
+  m_Center: {x: -0.20135343, y: 0.5088055, z: -0.010597706}
 --- !u!1 &5783550501991349886
 GameObject:
   m_ObjectHideFlags: 0

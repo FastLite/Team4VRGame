@@ -2,27 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class TableManager : MonoBehaviour
 {
+    public ParticleSystem CheckmarkAnim;
     public int plates;
     public int teacups;
-    public Text plateText;
+    public TextMeshProUGUI plateText;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        //plateText = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (plates == 2 && teacups == 1)
+        {
+            plateText.gameObject.SetActive(true);
+        }
     }
 
     public void increaseplate()
     {
         plates += 1;
+       
 
         if (plates == 4)
         {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class TableTrigger : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class TableTrigger : MonoBehaviour
             //Debug.Log("Teddybear is in plaace");
             TableMNGR.increaseplate();
         }
+       
     }
 
 
