@@ -26,7 +26,7 @@ public class TableTrigger : MonoBehaviour
         {
             TableMNGR.increaseplate();
             gameObject.GetComponent<Renderer>().enabled = false;
-            Instantiate(CheckMarkParticle, gameObject.transform);
+            Instantiate(CheckMarkParticle, gameObject.transform);           
         }
 
         if (other.gameObject.CompareTag("Teacups") && TriggerType == TRIGGER_TYPE.Cup)
@@ -34,7 +34,6 @@ public class TableTrigger : MonoBehaviour
             TableMNGR.increaseTeacups();
             gameObject.GetComponent<Renderer>().enabled = false;
             Instantiate(CheckMarkParticle, gameObject.transform);
-            
         }
        
     }
