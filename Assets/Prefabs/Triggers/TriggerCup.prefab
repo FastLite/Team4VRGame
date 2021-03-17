@@ -121,4 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlateIn: 0
+  CheckMarkParticle: {fileID: 1244113219987049490, guid: aaff22f590fe15b48816957b0c2f18f2,
+    type: 3}
   TriggerType: 1

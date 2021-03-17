@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5769373528737933098}
   - component: {fileID: 5769373528737933142}
   m_Layer: 0
-  m_Name: TriggerPlate 1
+  m_Name: TriggerPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,4 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlateIn: 0
+  CheckMarkParticle: {fileID: 1244113219987049490, guid: aaff22f590fe15b48816957b0c2f18f2,
+    type: 3}
   TriggerType: 0
