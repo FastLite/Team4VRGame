@@ -3,30 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
+
+public enum TRIGGER_TYPE {Plate, Cup, Bear};
 public class TableTrigger : MonoBehaviour
 {
     public bool isPlateIn;
     private TableManager TableMNGR;
-    // Start is called before the first frame update
+    public GameObject CheckMarkParticle;
+
+
+    public TRIGGER_TYPE TriggerType;
+     
     private void Awake()
     {
         TableMNGR = FindObjectOfType<TableManager>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
-
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Plates")
+    private void OnTriggerEnter(Collider other)
+    { 
+        
+        if (other.gameObject.CompareTag("Plates") && TriggerType == TRIGGER_TYPE.Plate)
         {
-            //Debug.Log("Teddybear is in plaace");
             TableMNGR.increaseplate();
+            gameObject.GetComponent<Renderer>().enabled = false;
+        }
+
+        if (other.gameObject.CompareTag("Teacups") && TriggerType == TRIGGER_TYPE.Cup)
+        {
+            TableMNGR.increaseTeacups();
+            gameObject.GetComponent<Renderer>().enabled = false;
         }
        
     }
@@ -34,9 +39,16 @@ public class TableTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Plates")
+        if (other.gameObject.CompareTag("Plates") && TriggerType == TRIGGER_TYPE.Plate)
         {
             TableMNGR.Decreaseplate();
+            gameObject.GetComponent<Renderer>().enabled = true;
+        }
+
+        if (other.gameObject.CompareTag("Teacups") && TriggerType == TRIGGER_TYPE.Cup)
+        {
+            TableMNGR.DecreaseTeacups();
+            gameObject.GetComponent<Renderer>().enabled = true;
         }
     }
 }

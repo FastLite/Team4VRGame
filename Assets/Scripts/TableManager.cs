@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using TMPro;
 public class TableManager : MonoBehaviour
 {
-    public ParticleSystem CheckmarkAnim;
     public int plates;
     public int teacups;
     public TextMeshProUGUI plateText;
@@ -13,7 +12,7 @@ public class TableManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //plateText = GetComponent<TextMeshProUGUI>();
+        
     }
 
     // Update is called once per frame
