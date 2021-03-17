@@ -7,12 +7,16 @@ public class TableManager : MonoBehaviour
 {
     public int plates;
     public int teacups;
-    public TextMeshProUGUI plateText;
+    public TextMeshProUGUI winText;
+    public TextMeshProUGUI plateCountText;
+    public TextMeshProUGUI cupCountText;
+    public TextMeshProUGUI teddyBearCountText;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        plateCountText.text = "Plates Placed : " + plates.ToString();
+        cupCountText.text = "Teacups Placed : " + teacups.ToString();
     }
 
     // Update is called once per frame
@@ -20,28 +24,26 @@ public class TableManager : MonoBehaviour
     {
         if (plates == 2 && teacups == 1)
         {
-            plateText.gameObject.SetActive(true);
+            winText.text = "Successfully Completed the Task";
         }
     }
 
     public void increaseplate()
     {
         plates += 1;
-       
+        plateCountText.text = "Plates Placed : " + plates.ToString();
+        
 
-        if (plates == 4)
-        {
-            plateText.text = "four plates were placed";
-        }
     }
     public void Decreaseplate()
-        {
+    {
         plates -= 1;
        
     }
     public void increaseTeacups()
     {
         teacups += 1;
+        cupCountText.text = "Teacups Placed : " + teacups.ToString();
     }
     public void DecreaseTeacups()
     {
