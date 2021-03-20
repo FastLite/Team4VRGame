@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfc6a1378947af7489f26e27ce5317d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlateIn: 0
-  CheckMarkParticle: {fileID: 1244113219987049490, guid: aaff22f590fe15b48816957b0c2f18f2,
+  objectInside: 0
+  checkMarkParticle: {fileID: 1244113219987049490, guid: aaff22f590fe15b48816957b0c2f18f2,
     type: 3}
   TriggerType: 1

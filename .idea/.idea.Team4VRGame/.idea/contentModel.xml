@@ -246,8 +246,10 @@
         <e p="Scripts" t="Include">
           <e p="CupTrigger.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="RadioScripts.cs" t="Include" />
           <e p="TableManager.cs" t="Include" />
           <e p="TableTrigger.cs" t="Include" />
+          <e p="VrplayerMovement.cs" t="Include" />
         </e>
         <e p="SkySerie Freebie" t="Include">
           <e p="Hdri setup.txt" t="Include" />

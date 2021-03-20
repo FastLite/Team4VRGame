@@ -4,53 +4,48 @@ using UnityEngine;
 using Valve.VR.InteractionSystem;
 
 
+
 public enum TRIGGER_TYPE {Plate, Cup, Bear};
+
 public class TableTrigger : MonoBehaviour
 {
-    public bool isPlateIn;
-    private TableManager TableMNGR;
-    public GameObject CheckMarkParticle;
+    public bool objectInside;
+    private TableManager tableManager;
+    public GameObject checkMarkParticle;
 
 
     public TRIGGER_TYPE TriggerType;
-     
+
     private void Awake()
     {
-        TableMNGR = FindObjectOfType<TableManager>();
+        tableManager = FindObjectOfType<TableManager>();
     }
-    
+
     private void OnTriggerEnter(Collider other)
-    { 
-        
-        if (other.gameObject.CompareTag("Plates") && TriggerType == TRIGGER_TYPE.Plate)
-        {
-            TableMNGR.increaseplate();
-            gameObject.GetComponent<Renderer>().enabled = false;
-            Instantiate(CheckMarkParticle, gameObject.transform);           
-        }
-
-        if (other.gameObject.CompareTag("Teacups") && TriggerType == TRIGGER_TYPE.Cup)
-        {
-            TableMNGR.increaseTeacups();
-            gameObject.GetComponent<Renderer>().enabled = false;
-            Instantiate(CheckMarkParticle, gameObject.transform);
-        }
-       
-    }
-
-
-    private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Plates") && TriggerType == TRIGGER_TYPE.Plate)
+        if (!objectInside)
         {
-            TableMNGR.Decreaseplate();
-            gameObject.GetComponent<Renderer>().enabled = true;
-        }
+            if (other.gameObject.CompareTag("Plates") && TriggerType == TRIGGER_TYPE.Plate &&
+                !other.GetComponent<Rigidbody>().isKinematic)
+            {
+                tableManager.increaseplate();
+                gameObject.GetComponent<Renderer>().enabled = false;
+                Instantiate(checkMarkParticle, gameObject.transform);
+                Destroy(other.gameObject.GetComponent<Throwable>());
+                other.transform.position = gameObject.transform.position;
 
-        if (other.gameObject.CompareTag("Teacups") && TriggerType == TRIGGER_TYPE.Cup)
-        {
-            TableMNGR.DecreaseTeacups();
-            gameObject.GetComponent<Renderer>().enabled = true;
+            }
+
+            if (other.gameObject.CompareTag("Teacups") && TriggerType == TRIGGER_TYPE.Cup)
+            {
+                tableManager.increaseTeacups();
+                gameObject.GetComponent<Renderer>().enabled = false;
+                Instantiate(checkMarkParticle, gameObject.transform);
+                Destroy(other.gameObject.GetComponent<Throwable>());
+                other.GetComponent<Interactable>().enabled = false;
+            }
         }
     }
+
+
 }
