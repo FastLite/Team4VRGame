@@ -54,7 +54,7 @@ public class RadioScripts : MonoBehaviour
     private void PlayTrack()
     {
         
-        if (currentTreck > trackList[currentTreck].length)
+        if (currentTreck == trackList[currentTreck].length)
         {
             currentTreck = 0;
         }

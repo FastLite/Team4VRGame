@@ -1,57 +1,92 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Random = UnityEngine.Random;
+
 public class TableManager : MonoBehaviour
 {
     public int plates;
     public int teacups;
+    public int currentRandomNumber;
+    public float spacing = .5f;
+
+    private int maxPlates;
+    private int maxCups;
+
+    public GameObject triggerPairPrefab;
+    public GameObject platePrefab;
+    public GameObject cupPrefab;
+    
     public TextMeshProUGUI winText;
     public TextMeshProUGUI plateCountText;
     public TextMeshProUGUI cupCountText;
     public TextMeshProUGUI teddyBearCountText;
 
     public List<Image> plateIcons = new List<Image>();
+    
+    public List<Transform> triggersSpawnPonts ;
+    public List<Transform> platesSpawnPonts ;
+    
+    public Transform parentForTriggers;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        plateCountText.text = "Plates Placed : " + plates.ToString();
-        cupCountText.text = "Teacups Placed : " + teacups.ToString();
+        currentRandomNumber = Random.Range(0,triggersSpawnPonts.Count);
+        InstantiateTriggerPair(triggersSpawnPonts[currentRandomNumber]);
+        triggersSpawnPonts.RemoveAt(currentRandomNumber);
+        
+        int pairsTorGenerate = Random.Range(0,triggersSpawnPonts.Count) ;
+        for (int i = 0; i < pairsTorGenerate; i++)
+        {
+            currentRandomNumber = Random.Range(0,triggersSpawnPonts.Count);   
+            InstantiateTriggerPair(triggersSpawnPonts[currentRandomNumber]);
+            triggersSpawnPonts.RemoveAt(currentRandomNumber);
+        }
+
+        for (int i = 0; i < pairsTorGenerate; i++)
+        {
+            Instantiate(platePrefab, platesSpawnPonts[0]);
+            //Instantiate(cupPrefab);
+            
+        }
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        plateCountText.text = "Plates Placed : " + plates;
+        cupCountText.text = "Teacups Placed : " + teacups;
+    }
+
     void Update()
     {
-        if (plates == 4 && teacups == 1)
+        if (plates == maxPlates && teacups == maxCups)
         {
             winText.text = "Successfully Completed the Task";
         }
     }
 
-    public void increaseplate()
+    public void ChangePlateCount(int number)
     {
-        plates += 1;
-        plateCountText.text = "Plates Placed : " + plates.ToString();
+        plates += number;
+        plateCountText.text = "Plates Placed : " + plates;
        
 
 
     }
-    public void Decreaseplate()
+    public void ChangeTeacupsCount(int number)
     {
-        plates -= 1;
-        plateCountText.text = "Plates Placed : " + plates.ToString();
+        teacups += number;
+        cupCountText.text = "Teacups Placed : " + teacups;
+    }
 
-    }
-    public void increaseTeacups()
+    public void InstantiateTriggerPair(Transform location)
     {
-        teacups += 1;
-        cupCountText.text = "Teacups Placed : " + teacups.ToString();
+        Instantiate(triggerPairPrefab, new Vector3(location.position.x, location.position.y, location.position.z), location.rotation );
+        maxCups++;
+        maxPlates++;
     }
-    public void DecreaseTeacups()
-    {
-        teacups -= 1;
-        cupCountText.text = "Teacups Placed : " + teacups.ToString();
-    }
+   
 }

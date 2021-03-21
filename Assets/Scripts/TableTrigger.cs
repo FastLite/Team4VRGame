@@ -28,7 +28,7 @@ public class TableTrigger : MonoBehaviour
             if (other.gameObject.CompareTag("Plates") && TriggerType == TRIGGER_TYPE.Plate &&
                 !other.GetComponent<Rigidbody>().isKinematic)
             {
-                tableManager.increaseplate();
+                tableManager.ChangePlateCount(1);
                 gameObject.GetComponent<Renderer>().enabled = false;
                 Instantiate(checkMarkParticle, gameObject.transform);
                 Destroy(other.gameObject.GetComponent<Throwable>());
@@ -38,7 +38,7 @@ public class TableTrigger : MonoBehaviour
 
             if (other.gameObject.CompareTag("Teacups") && TriggerType == TRIGGER_TYPE.Cup)
             {
-                tableManager.increaseTeacups();
+                tableManager.ChangeTeacupsCount(1);
                 gameObject.GetComponent<Renderer>().enabled = false;
                 Instantiate(checkMarkParticle, gameObject.transform);
                 Destroy(other.gameObject.GetComponent<Throwable>());

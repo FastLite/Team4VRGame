@@ -244,9 +244,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="CupTrigger.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="RadioScripts.cs" t="Include" />
+          <e p="RegisterObjectiveItem.cs" t="Include" />
           <e p="TableManager.cs" t="Include" />
           <e p="TableTrigger.cs" t="Include" />
           <e p="VrplayerMovement.cs" t="Include" />
