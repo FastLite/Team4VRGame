@@ -20,17 +20,27 @@ public class TableManager : MonoBehaviour
     public GameObject platePrefab;
     public GameObject cupPrefab;
     
+    
     public TextMeshProUGUI winText;
     public TextMeshProUGUI plateCountText;
     public TextMeshProUGUI cupCountText;
     public TextMeshProUGUI teddyBearCountText;
-
-    public List<Image> plateIcons = new List<Image>();
     
     public List<Transform> triggersSpawnPonts ;
     public List<Transform> platesSpawnPonts ;
     public Transform cupSpawnPoint ;
-    
+
+    /// <summary>
+    /// UI Components
+    /// </summary>
+    public RectTransform platesIconSpawnPoints;
+    public GameObject plateIconPrefab;
+
+    public RectTransform cupIconSpawnPoints;
+    public GameObject cupIconPrefab;
+
+
+
 
     private void Awake()
     {
@@ -58,7 +68,9 @@ public class TableManager : MonoBehaviour
             var position = cupSpawnPoint.position;
             Instantiate(cupPrefab, new Vector3(position.x, position.y, position.z + spacing * i), cupSpawnPoint.rotation);
             
-            
+            Instantiate(plateIconPrefab, platesIconSpawnPoints);
+            Instantiate(cupIconPrefab, cupIconSpawnPoints);
+
         }
         
         plateCountText.text = "Plates Placed : " + plates;
