@@ -36,13 +36,14 @@ public class TableTrigger : MonoBehaviour
 
             }
 
-            if (other.gameObject.CompareTag("Teacups") && TriggerType == TRIGGER_TYPE.Cup)
+            if (other.gameObject.CompareTag("Teacups") && TriggerType == TRIGGER_TYPE.Cup &&
+                !other.GetComponent<Rigidbody>().isKinematic )
             {
                 tableManager.ChangeTeacupsCount(1);
                 gameObject.GetComponent<Renderer>().enabled = false;
                 Instantiate(checkMarkParticle, gameObject.transform);
                 Destroy(other.gameObject.GetComponent<Throwable>());
-                other.GetComponent<Interactable>().enabled = false;
+                other.transform.position = gameObject.transform.position;
             }
         }
     }

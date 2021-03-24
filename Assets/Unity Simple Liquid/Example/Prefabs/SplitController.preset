@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SplitController
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: acb562255fca9b544b4583d4e7147e92,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: liquidContainer
+    value: 
+    objectReference: {fileID: 8296172667356064988, guid: dcd73b51eabfdb64d8180fae92d8e674,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: bottleneckRadius
+    value: 0.045
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: splitSpeed
+    value: 40
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: maxEdgeDrops
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: particlesPrefab
+    value: 
+    objectReference: {fileID: 5157395080114985353, guid: 6cbd7c4436dcf4a709ab46f353a9d3c3,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: mixingSpeed
+    value: 1
+    objectReference: {fileID: 0}

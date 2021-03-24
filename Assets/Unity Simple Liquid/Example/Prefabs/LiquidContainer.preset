@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LiquidContainer
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 7f97c0cadc5f88b46b59a38d17fac88e,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: liquidRender
+    value: 
+    objectReference: {fileID: 765355747951042094, guid: dcd73b51eabfdb64d8180fae92d8e674,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: liquidMaterial
+    value: 
+    objectReference: {fileID: 2100000, guid: 8dec526bbd84d684da6f40f79c3ab1bd, type: 2}
+  - target: {fileID: 0}
+    propertyPath: cap
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: isOpen
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: inertness
+    value: 50
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: liquidColor.r
+    value: 0.09411764
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: liquidColor.g
+    value: 0.36862746
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: liquidColor.b
+    value: 0.13224405
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: liquidColor.a
+    value: 0.4117647
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: fillAmountPercent
+    value: 0.491
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: customVolume
+    value: 0
+    objectReference: {fileID: 0}

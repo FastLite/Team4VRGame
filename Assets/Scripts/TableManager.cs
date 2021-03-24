@@ -11,7 +11,7 @@ public class TableManager : MonoBehaviour
     public int plates;
     public int teacups;
     public int currentRandomNumber;
-    public float spacing = .5f;
+    public float spacing = .25f;
 
     private int maxPlates;
     private int maxCups;
@@ -29,16 +29,22 @@ public class TableManager : MonoBehaviour
     
     public List<Transform> triggersSpawnPonts ;
     public List<Transform> platesSpawnPonts ;
+    public Transform cupSpawnPoint ;
     
-    public Transform parentForTriggers;
 
     private void Awake()
+    {
+       
+    }
+
+    void Start()
     {
         currentRandomNumber = Random.Range(0,triggersSpawnPonts.Count);
         InstantiateTriggerPair(triggersSpawnPonts[currentRandomNumber]);
         triggersSpawnPonts.RemoveAt(currentRandomNumber);
         
-        int pairsTorGenerate = Random.Range(0,triggersSpawnPonts.Count) ;
+        int pairsTorGenerate = Random.Range(0,triggersSpawnPonts.Count);
+        
         for (int i = 0; i < pairsTorGenerate; i++)
         {
             currentRandomNumber = Random.Range(0,triggersSpawnPonts.Count);   
@@ -46,16 +52,15 @@ public class TableManager : MonoBehaviour
             triggersSpawnPonts.RemoveAt(currentRandomNumber);
         }
 
-        for (int i = 0; i < pairsTorGenerate; i++)
+        for (int i = 0; i < pairsTorGenerate +1; i++)
         {
             Instantiate(platePrefab, platesSpawnPonts[0]);
-            //Instantiate(cupPrefab);
+            var position = cupSpawnPoint.position;
+            Instantiate(cupPrefab, new Vector3(position.x, position.y, position.z + spacing * i), cupSpawnPoint.rotation);
+            
             
         }
-    }
-
-    void Start()
-    {
+        
         plateCountText.text = "Plates Placed : " + plates;
         cupCountText.text = "Teacups Placed : " + teacups;
     }

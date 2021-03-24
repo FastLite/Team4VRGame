@@ -92,6 +92,9 @@ GameObject:
   - component: {fileID: 3161684126402198695}
   - component: {fileID: 6601576679599515168}
   - component: {fileID: 4200275815951468676}
+  - component: {fileID: 3081980275386741617}
+  - component: {fileID: 3368497964459163394}
+  - component: {fileID: 2277679891834981461}
   m_Layer: 0
   m_Name: Cup
   m_TagString: Teacups
@@ -250,6 +253,59 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.3564851, y: 0.9331441, z: 1.9325876}
   m_Center: {x: -0.20135343, y: 0.5088055, z: -0.010597706}
+--- !u!114 &3081980275386741617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269296007242472633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb562255fca9b544b4583d4e7147e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liquidContainer: {fileID: 8296172667356064988, guid: dcd73b51eabfdb64d8180fae92d8e674,
+    type: 3}
+  bottleneckRadius: 0.1
+  splitSpeed: 40
+  maxEdgeDrops: 4
+  particlesPrefab: {fileID: 5157395080114985353, guid: 6cbd7c4436dcf4a709ab46f353a9d3c3,
+    type: 3}
+  mixingSpeed: 1
+--- !u!114 &3368497964459163394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269296007242472633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f97c0cadc5f88b46b59a38d17fac88e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  liquidRender: {fileID: 765355747951042094, guid: dcd73b51eabfdb64d8180fae92d8e674,
+    type: 3}
+  liquidMaterial: {fileID: 2100000, guid: 8dec526bbd84d684da6f40f79c3ab1bd, type: 2}
+  cap: {fileID: 0}
+  isOpen: 1
+  inertness: 50
+  liquidColor: {r: 1, g: 0.81432277, b: 0.4292453, a: 0.4117647}
+  fillAmountPercent: 0
+  customVolume: 0
+--- !u!114 &2277679891834981461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269296007242472633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163e5a2cd4fa0e540ba8694fcb213988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5783550501991349886
 GameObject:
   m_ObjectHideFlags: 0
