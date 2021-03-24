@@ -31,6 +31,7 @@ public class TableTrigger : MonoBehaviour
                 tableManager.ChangePlateCount(1);
                 gameObject.GetComponent<Renderer>().enabled = false;
                 Instantiate(checkMarkParticle, gameObject.transform);
+                Destroy(tableManager.plateIconPrefab, 1f);
                 Destroy(other.gameObject.GetComponent<Throwable>());
                 other.transform.position = gameObject.transform.position;
 

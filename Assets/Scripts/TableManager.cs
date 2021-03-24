@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class TableManager : MonoBehaviour
 {
+
     public int plates;
     public int teacups;
     public int currentRandomNumber;
@@ -16,26 +17,23 @@ public class TableManager : MonoBehaviour
     private int maxPlates;
     private int maxCups;
 
+    //Gameobjects
     public GameObject triggerPairPrefab;
     public GameObject platePrefab;
     public GameObject cupPrefab;
     
-    
+    //TextMeshPro
     public TextMeshProUGUI winText;
-    public TextMeshProUGUI plateCountText;
-    public TextMeshProUGUI cupCountText;
-    public TextMeshProUGUI teddyBearCountText;
-    
+
+    //SpawnPoints
     public List<Transform> triggersSpawnPonts ;
     public List<Transform> platesSpawnPonts ;
     public Transform cupSpawnPoint ;
 
-    /// <summary>
+   
     /// UI Components
-    /// </summary>
     public RectTransform platesIconSpawnPoints;
     public GameObject plateIconPrefab;
-
     public RectTransform cupIconSpawnPoints;
     public GameObject cupIconPrefab;
 
@@ -72,9 +70,7 @@ public class TableManager : MonoBehaviour
             Instantiate(cupIconPrefab, cupIconSpawnPoints);
 
         }
-        
-        plateCountText.text = "Plates Placed : " + plates;
-        cupCountText.text = "Teacups Placed : " + teacups;
+
     }
 
     void Update()
@@ -87,16 +83,11 @@ public class TableManager : MonoBehaviour
 
     public void ChangePlateCount(int number)
     {
-        plates += number;
-        plateCountText.text = "Plates Placed : " + plates;
-       
-
-
+        plates += number;    
     }
     public void ChangeTeacupsCount(int number)
     {
-        teacups += number;
-        cupCountText.text = "Teacups Placed : " + teacups;
+        teacups += number; 
     }
 
     public void InstantiateTriggerPair(Transform location)
