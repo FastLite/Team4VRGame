@@ -2452,9 +2452,6 @@ MonoBehaviour:
   cupPrefab: {fileID: 3269296007242472633, guid: 22a2ffc9fd18d6f4589d329e8bc4f88f,
     type: 3}
   winText: {fileID: 201076805}
-  plateCountText: {fileID: 0}
-  cupCountText: {fileID: 0}
-  teddyBearCountText: {fileID: 1747189281}
   triggersSpawnPonts:
   - {fileID: 1227775420}
   - {fileID: 954236316}
@@ -2463,8 +2460,11 @@ MonoBehaviour:
   platesSpawnPonts:
   - {fileID: 2103795317}
   cupSpawnPoint: {fileID: 2041158909}
-  platesIconSpawnPonts: {fileID: 1925637224}
+  platesIconSpawnPoints: {fileID: 1925637224}
   plateIconPrefab: {fileID: 376212242626374383, guid: de46d1e1a71fce7428bdb9a3d9f6b2ad,
+    type: 3}
+  cupIconSpawnPoints: {fileID: 1412508743}
+  cupIconPrefab: {fileID: 3583957987204301931, guid: d751d185edf866f4093fe9cb018870d5,
     type: 3}
 --- !u!4 &896148087
 Transform:
