@@ -20,6 +20,7 @@ public class RadioScripts : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(trackList.Count);
         currentTreck = Random.Range(0, trackList.Count);
         radioSource.clip = trackList[currentTreck];
         StartCoroutine("AutoPlayNextTrack");
@@ -54,7 +55,7 @@ public class RadioScripts : MonoBehaviour
     private void PlayTrack()
     {
         
-        if (currentTreck + 1 == trackList[currentTreck].length)
+        if (currentTreck + 1 == trackList.Count)
         {
             currentTreck = 0;
         }
