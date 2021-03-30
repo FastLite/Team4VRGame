@@ -34,7 +34,7 @@ namespace UnitySimpleLiquid
 
         [Range(0f, 1f)]
         [SerializeField]
-        private float fillAmountPercent = 0.5f;
+        public float fillAmountPercent = 0.5f;
 
         [Header("Container Volume")]
         [SerializeField]
@@ -50,6 +50,12 @@ namespace UnitySimpleLiquid
         private void Start()
         {
             splitController = GetComponent<SplitController>();
+            
+            if (!customVolume)
+                volume = CalculateVolume();
+
+            if (Application.isPlaying)
+                UpdateWoble();
         }
 
         #region Liquid Amount
@@ -363,11 +369,7 @@ namespace UnitySimpleLiquid
             UpdateSurfacePos();
 
             // In case transform scale is changed - update volume
-            if (!customVolume)
-                volume = CalculateVolume();
-
-            if (Application.isPlaying)
-                UpdateWoble();
+            
         }
 
         private void OnValidate()

@@ -11,6 +11,7 @@ public class TableManager : MonoBehaviour
 
     public int plates;
     public int teacups;
+    public int FilledCups;
     public int currentRandomNumber;
     public float spacing = .25f;
 
@@ -88,6 +89,10 @@ public class TableManager : MonoBehaviour
     public void ChangeTeacupsCount(int number)
     {
         teacups += number; 
+    }
+    public void ChangeFillCount(int number)
+    {
+        FilledCups += number; 
     }
 
     public void InstantiateTriggerPair(Transform location)

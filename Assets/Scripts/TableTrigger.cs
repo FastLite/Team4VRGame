@@ -10,12 +10,13 @@ public enum TRIGGER_TYPE {Plate, Cup, Bear};
 public class TableTrigger : MonoBehaviour
 {
     public bool objectInside;
-    private TableManager tableManager;
+    
     public GameObject checkMarkParticle;
 
 
     public TRIGGER_TYPE TriggerType;
 
+    private TableManager tableManager;
     private void Awake()
     {
         tableManager = FindObjectOfType<TableManager>();

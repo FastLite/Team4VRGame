@@ -4,6 +4,7 @@
     <e p="C:\Users\user\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
     <e p="C:\Users\user\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Team4VRGame.-1022932433.00" t="ExcludeRecursive" />
     <e p="D:\project\GitProjects\Team4VRGame" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Aura 2" t="Include">
@@ -243,10 +244,12 @@
             </e>
           </e>
         </e>
+        <e p="FileReadWrite.cs" t="Include" />
+        <e p="ItemClass.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="FillingCheck.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="RadioScripts.cs" t="Include" />
-          <e p="RegisterObjectiveItem.cs" t="Include" />
           <e p="TableManager.cs" t="Include" />
           <e p="TableTrigger.cs" t="Include" />
           <e p="VrplayerMovement.cs" t="Include" />
@@ -585,6 +588,24 @@
           </e>
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Unity Simple Liquid" t="Include">
+          <e p="Editor" t="Include">
+            <e p="LiquidContainerEditor.cs" t="Include" />
+            <e p="SplitControllerEditor.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="EndlessContainer.cs" t="Include" />
+            <e p="LiquidContainer.cs" t="Include" />
+            <e p="SplitController.cs" t="Include" />
+            <e p="Utils" t="Include">
+              <e p="GeomUtils.cs" t="Include" />
+              <e p="GizmosHelper.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="SimpleLiquidShader.shader" t="Include" />
           </e>
         </e>
       </e>

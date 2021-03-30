@@ -76,3 +76,5 @@ Material:
     m_Colors:
     - _Color: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 0.18039216}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GravityDirection: {r: 0, g: -1, b: 0, a: 0}
+    - _SurfaceLevel: {r: 0, g: 1, b: 0, a: 0}
