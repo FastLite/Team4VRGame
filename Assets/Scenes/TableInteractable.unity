@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1775887526}
-  m_IndirectSpecularColor: {r: 0.1821997, g: 0.22466418, b: 0.28856492, a: 1}
+  m_IndirectSpecularColor: {r: 0.14611748, g: 0.08289188, b: 0.04666216, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2443,6 +2443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plates: 0
   teacups: 0
+  FilledCups: 0
   currentRandomNumber: 0
   spacing: 0.25
   triggerPairPrefab: {fileID: 9138681093052951547, guid: 6ad0d69909592ea41a4ff1a3f61b9a29,
@@ -3352,6 +3353,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343f90aaf2fb9a3409ddc3938db58990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1352379381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1352379383}
+  - component: {fileID: 1352379382}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1352379382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352379381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a6a70209b6e6345bfe18b02314a54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: EndGameScene(Jolanne)
+  internalProcessPath: 
+  internalProcessArgs: 
+  loadAdditive: 0
+  loadAsync: 1
+  loadingScreen: {fileID: 2800000, guid: 438e868ac8cccca4e81873838a67c003, type: 3}
+  progressBarEmpty: {fileID: 0}
+  progressBarFull: {fileID: 2800000, guid: 778948ae778687245917139521fc5b51, type: 3}
+  loadingScreenWidthInMeters: 6
+  progressBarWidthInMeters: 3
+  loadingScreenDistance: 0
+  loadingScreenTransform: {fileID: 0}
+  progressBarTransform: {fileID: 0}
+  front: {fileID: 2800000, guid: d822c5eff7d42f04691027bc8c2b0716, type: 3}
+  back: {fileID: 2800000, guid: a779becf00399924184cd13e046a100e, type: 3}
+  left: {fileID: 2800000, guid: 740f96d568f4f3e40b049c40f11603e5, type: 3}
+  right: {fileID: 2800000, guid: 438e868ac8cccca4e81873838a67c003, type: 3}
+  top: {fileID: 2800000, guid: a199da0432efa6a489df8883d1f3bfe0, type: 3}
+  bottom: {fileID: 2800000, guid: 94b877781ad034640abce933599b6f2e, type: 3}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  showGrid: 0
+  fadeOutTime: 0.5
+  fadeInTime: 0.5
+  postLoadSettleTime: 0
+  loadingScreenFadeInTime: 1
+  loadingScreenFadeOutTime: 0.25
+  autoTriggerOnEnable: 0
+--- !u!4 &1352379383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352379381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.45814943, y: 1.520814, z: 2.6002283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388744660
 GameObject:
   m_ObjectHideFlags: 0
@@ -4136,12 +4207,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546131115}
   m_CullTransparentMesh: 0
---- !u!4 &1551270609 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5412805446814596178, guid: c06ff79f2c3222d49941d64bca0033f8,
-    type: 3}
-  m_PrefabInstance: {fileID: 2028021661}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1559685075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3178261686284447188, guid: b70ec9ae95169154388496c08f64dc88,
@@ -5589,7 +5654,7 @@ Transform:
   - {fileID: 1406962503}
   - {fileID: 1514968698}
   - {fileID: 1451634126}
-  - {fileID: 1551270609}
+  - {fileID: 2028021662}
   - {fileID: 1559685075}
   - {fileID: 1249880124}
   - {fileID: 1438583072}
@@ -5737,6 +5802,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c06ff79f2c3222d49941d64bca0033f8, type: 3}
+--- !u!4 &2028021662 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7995276756283069969, guid: c06ff79f2c3222d49941d64bca0033f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2028021661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2032480728
 GameObject:
   m_ObjectHideFlags: 0
