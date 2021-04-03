@@ -2445,7 +2445,9 @@ MonoBehaviour:
   teacups: 0
   FilledCups: 0
   currentRandomNumber: 0
+  removedJunk: 0
   spacing: 0.25
+  objectiveType: 0
   triggerPairPrefab: {fileID: 9138681093052951547, guid: 6ad0d69909592ea41a4ff1a3f61b9a29,
     type: 3}
   platePrefab: {fileID: 7072788447925244059, guid: 2e398aaeef963794ba87aff6c069ec3b,
@@ -2461,6 +2463,7 @@ MonoBehaviour:
   platesSpawnPonts:
   - {fileID: 2103795317}
   cupSpawnPoint: {fileID: 2041158909}
+  junkSpawnArea: {fileID: 0}
   platesIconSpawnPoints: {fileID: 1925637224}
   plateIconPrefab: {fileID: 376212242626374383, guid: de46d1e1a71fce7428bdb9a3d9f6b2ad,
     type: 3}
@@ -3422,6 +3425,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1359500391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1359500392}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1359500392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359500391}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388744660
 GameObject:

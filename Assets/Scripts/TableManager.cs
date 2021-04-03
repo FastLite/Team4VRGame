@@ -12,15 +12,19 @@ public class TableManager : MonoBehaviour
     public int FilledCups;
     public int currentRandomNumber;
     public int removedJunk;
+    public int plateScore;
+    public int cupScore;
     public float spacing = .25f;
+    public int totalScore;
 
     
     private int maxPlates;
     private int cupsToFill;
     private int maxCups;
     private int generatedJunk;
-    
-    
+
+
+
     public OBJECTIVE_TYPE objectiveType;
 
 
@@ -31,6 +35,7 @@ public class TableManager : MonoBehaviour
     
     //TextMeshPro
     public TextMeshProUGUI winText;
+    public TextMeshProUGUI TotalScoreText;
 
     //SpawnPoints
     public List<Transform> triggersSpawnPonts ;
@@ -45,6 +50,8 @@ public class TableManager : MonoBehaviour
     public GameObject plateIconPrefab;
     public RectTransform cupIconSpawnPoints;
     public GameObject cupIconPrefab;
+    
+
 
 
 
@@ -146,11 +153,29 @@ public class TableManager : MonoBehaviour
         FilledCups += number; 
     }
 
+    public void AddPlateScore(int number)
+    {
+        plateScore += number;
+        plateScore = totalScore;
+        TotalScoreText.text = "Score: " + totalScore;
+
+    }
+
+    public void AddCupScore(int number)
+    {
+        cupScore += number;
+        cupScore = totalScore;
+        TotalScoreText.text = "Score: " + totalScore;
+
+    }
+
     public void InstantiateTriggerPair(Transform location)
     {
         Instantiate(triggerPairPrefab, new Vector3(location.position.x, location.position.y, location.position.z), location.rotation );
         maxCups++;
         maxPlates++;
     }
+
+    
    
 }
