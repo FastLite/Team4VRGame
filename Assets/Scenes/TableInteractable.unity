@@ -2446,7 +2446,10 @@ MonoBehaviour:
   FilledCups: 0
   currentRandomNumber: 0
   removedJunk: 0
+  plateScore: 0
+  cupScore: 0
   spacing: 0.25
+  totalScore: 0
   objectiveType: 0
   triggerPairPrefab: {fileID: 9138681093052951547, guid: 6ad0d69909592ea41a4ff1a3f61b9a29,
     type: 3}
@@ -2455,6 +2458,7 @@ MonoBehaviour:
   cupPrefab: {fileID: 3269296007242472633, guid: 22a2ffc9fd18d6f4589d329e8bc4f88f,
     type: 3}
   winText: {fileID: 201076805}
+  TotalScoreText: {fileID: 0}
   triggersSpawnPonts:
   - {fileID: 1227775420}
   - {fileID: 954236316}
@@ -5974,6 +5978,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1933229280}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2124508336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124508339}
+  - component: {fileID: 2124508337}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2124508337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124508336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0410a7a3b6f2e1941bc7b5817af4704f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - clip: {fileID: 8300000, guid: 19820887337e1b440858dc4c5be07c04, type: 3}
+    name: Background1
+    volume: 0.282
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+--- !u!4 &2124508339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124508336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0274832, y: 3.4649496, z: 1.2007024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2135898918
 GameObject:
