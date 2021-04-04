@@ -9,7 +9,7 @@ public class TableManager : MonoBehaviour
     //Variables
     public int plates;
     public int teacups;
-    public int FilledCups;
+    public int filledCups;
     public int currentRandomNumber;
     public int removedJunk;
     public int plateScore;
@@ -32,6 +32,7 @@ public class TableManager : MonoBehaviour
     public GameObject triggerPairPrefab;
     public GameObject platePrefab;
     public GameObject cupPrefab;
+    public GameObject kettlePrefab;
     
     //TextMeshPro
     public TextMeshProUGUI winText;
@@ -41,6 +42,7 @@ public class TableManager : MonoBehaviour
     public List<Transform> triggersSpawnPonts ;
     public List<Transform> platesSpawnPonts ;
     public Transform cupSpawnPoint ;
+    public Transform kettleSpawnPoint ;
     public Collider junkSpawnArea;
 
 
@@ -59,7 +61,6 @@ public class TableManager : MonoBehaviour
     private void Awake()
     {
         int oneOrTwo = Random.Range(0, 2);
-         oneOrTwo = 1;
         if (oneOrTwo == 0)
         {
             objectiveType = OBJECTIVE_TYPE.Place;
@@ -77,6 +78,7 @@ public class TableManager : MonoBehaviour
             currentRandomNumber = Random.Range(0,triggersSpawnPonts.Count);
             InstantiateTriggerPair(triggersSpawnPonts[currentRandomNumber]);
             triggersSpawnPonts.RemoveAt(currentRandomNumber);
+            Instantiate(kettlePrefab, kettleSpawnPoint);
         
             int pairsTorGenerate = Random.Range(0,triggersSpawnPonts.Count);
         
@@ -121,7 +123,7 @@ public class TableManager : MonoBehaviour
 
     void Update()
     {
-        if (plates == maxPlates && teacups == maxCups && objectiveType == OBJECTIVE_TYPE.Place) //&&cupstoFill == filledcups
+        if (plates == maxPlates && teacups == maxCups && cupsToFill == filledCups && objectiveType == OBJECTIVE_TYPE.Place) 
         {
             winText.text = "Successfully Completed the Task";
         }
@@ -150,7 +152,7 @@ public class TableManager : MonoBehaviour
     }
     public void ChangeFillCount(int number)
     {
-        FilledCups += number; 
+        filledCups += number; 
     }
 
     public void AddPlateScore(int number)

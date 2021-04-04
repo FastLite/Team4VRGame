@@ -291,10 +291,12 @@
         <e p="FileReadWrite.cs" t="Include" />
         <e p="ItemClass.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="audioManager.cs" t="Include" />
           <e p="DestroyJunkArea.cs" t="Include" />
           <e p="FillingCheck.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="RadioScripts.cs" t="Include" />
+          <e p="Sound.cs" t="Include" />
           <e p="TableManager.cs" t="Include" />
           <e p="TableTrigger.cs" t="Include" />
           <e p="VrplayerMovement.cs" t="Include" />

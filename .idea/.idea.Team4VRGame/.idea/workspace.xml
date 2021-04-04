@@ -32,8 +32,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FillingCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RadioScripts.cs" />
         <option value="$PROJECT_DIR$/Assets/Unity Simple Liquid/Scripts/SplitController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TableManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DestroyJunkArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TableManager.cs" />
       </list>
     </option>
   </component>
@@ -95,6 +95,7 @@
       <workItem from="1617048699242" duration="197000" />
       <workItem from="1617135776461" duration="829000" />
       <workItem from="1617401870683" duration="3586000" />
+      <workItem from="1617533064019" duration="5872000" />
     </task>
     <servers />
   </component>
