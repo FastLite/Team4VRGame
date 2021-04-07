@@ -110,7 +110,7 @@ public class TableManager : MonoBehaviour
             {
                 Instantiate(platePrefab, platesSpawnPonts[0]);
                 var position = cupSpawnPoint.position;
-                Instantiate(cupPrefab, new Vector3(position.x + spacing * i, position.y, position.z ), cupSpawnPoint.rotation);
+                Instantiate(cupPrefab, new Vector3(position.x , position.y, position.z + spacing * i ), cupSpawnPoint.rotation);
             
                 Instantiate(plateIconPrefab, platesIconSpawnPoints);
                 Instantiate(cupIconPrefab, cupIconSpawnPoints);
