@@ -30,10 +30,10 @@ public class TableTrigger : MonoBehaviour
                 !other.GetComponent<Rigidbody>().isKinematic)
             {
                 tableManager.ChangePlateCount(1);
-                tableManager.AddPlateScore(Random.Range(25, 75));
+                tableManager.TotalScore(Random.Range(25, 75));
                 gameObject.GetComponent<Renderer>().enabled = false;
                 Instantiate(checkMarkParticle, gameObject.transform);
-                Destroy(tableManager.plateIconPrefab, 1f);
+                tableManager.plateIconPrefab.SetActive(false);
                 Destroy(other.gameObject.GetComponent<Throwable>());
                 other.transform.position = gameObject.transform.position;
 
@@ -43,9 +43,10 @@ public class TableTrigger : MonoBehaviour
                 !other.GetComponent<Rigidbody>().isKinematic )
             {
                 tableManager.ChangeTeacupsCount(1);
-                //tableManager.AddCupScore(Random.Range(15, 45));
+                tableManager.TotalScore(Random.Range(15, 45));
                 gameObject.GetComponent<Renderer>().enabled = false;
                 Instantiate(checkMarkParticle, gameObject.transform);
+                tableManager.cupIconPrefab.SetActive(false);
                 Destroy(other.gameObject.GetComponent<Throwable>());
                 other.transform.position = gameObject.transform.position;
             }

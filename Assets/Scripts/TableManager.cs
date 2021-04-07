@@ -73,7 +73,7 @@ public class TableManager : MonoBehaviour
         {
             objectiveType = OBJECTIVE_TYPE.Place;
             PlaceGameCanvas.SetActive(true);
-
+            TotalScore(0);
 
         }
         else
@@ -172,13 +172,12 @@ public class TableManager : MonoBehaviour
         filledCups += number; 
     }
 
-    public void AddPlateScore(int number)
+    public void TotalScore(int randomScore)
     {
-        plateScore += number;
-        plateScore = totalScore;
-        TotalScoreText.text = "Score: " + totalScore;
-
+        randomScore += totalScore;
+        TotalScoreText.text = "Score: " + randomScore;
     }
+
 
     public void junkCollection()
     {
