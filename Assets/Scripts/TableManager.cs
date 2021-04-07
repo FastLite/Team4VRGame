@@ -22,6 +22,8 @@ public class TableManager : MonoBehaviour
     private int cupsToFill;
     private int maxCups;
     private int generatedJunk;
+    private float gamescale;
+    public GameObject player;
 
 
 
@@ -73,6 +75,9 @@ public class TableManager : MonoBehaviour
 
     void Start()
     {
+        gamescale = PlayerPrefs.GetFloat("Hight");
+    player.transform.localPosition = new Vector3(0.9785619f, gamescale, -8.244994f);
+
         if (objectiveType == OBJECTIVE_TYPE.Place)
         {
             currentRandomNumber = Random.Range(0,triggersSpawnPonts.Count);
