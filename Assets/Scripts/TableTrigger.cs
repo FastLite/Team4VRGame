@@ -43,7 +43,7 @@ public class TableTrigger : MonoBehaviour
                 !other.GetComponent<Rigidbody>().isKinematic )
             {
                 tableManager.ChangeTeacupsCount(1);
-                tableManager.AddCupScore(Random.Range(15, 45));
+                //tableManager.AddCupScore(Random.Range(15, 45));
                 gameObject.GetComponent<Renderer>().enabled = false;
                 Instantiate(checkMarkParticle, gameObject.transform);
                 Destroy(other.gameObject.GetComponent<Throwable>());

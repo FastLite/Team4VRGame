@@ -21,7 +21,9 @@ public class TableManager : MonoBehaviour
     private int maxPlates;
     private int cupsToFill;
     private int maxCups;
-    private int generatedJunk;
+    public int generatedJunk;
+
+
     private float gamescale;
     public GameObject player;
 
@@ -35,10 +37,14 @@ public class TableManager : MonoBehaviour
     public GameObject platePrefab;
     public GameObject cupPrefab;
     public GameObject kettlePrefab;
+    public GameObject PlaceGameCanvas;
+    public GameObject JunkCollectingCanvas;
     
     //TextMeshPro
     public TextMeshProUGUI winText;
     public TextMeshProUGUI TotalScoreText;
+    public TextMeshProUGUI removedJunkText;
+    public TextMeshProUGUI totalJunkText;
 
     //SpawnPoints
     public List<Transform> triggersSpawnPonts ;
@@ -66,17 +72,23 @@ public class TableManager : MonoBehaviour
         if (oneOrTwo == 0)
         {
             objectiveType = OBJECTIVE_TYPE.Place;
+            PlaceGameCanvas.SetActive(true);
+
+
         }
         else
         {
             objectiveType = OBJECTIVE_TYPE.Clean;
+            JunkCollectingCanvas.SetActive(true);
+            totalJunkText.text = "Total Junk: " + generatedJunk;
+            removedJunkText.text = "Removed Junk: " + removedJunk;
         }
     }
 
     void Start()
     {
-        gamescale = PlayerPrefs.GetFloat("Hight");
-    player.transform.localPosition = new Vector3(0.9785619f, gamescale, -8.244994f);
+    //    gamescale = PlayerPrefs.GetFloat("Hight");
+    //player.transform.localPosition = new Vector3(0.9785619f, gamescale, -8.244994f);
 
         if (objectiveType == OBJECTIVE_TYPE.Place)
         {
@@ -168,11 +180,12 @@ public class TableManager : MonoBehaviour
 
     }
 
-    public void AddCupScore(int number)
+    public void junkCollection()
     {
-        cupScore += number;
-        cupScore = totalScore;
-        TotalScoreText.text = "Score: " + totalScore;
+        removedJunk += 1;
+
+        totalJunkText.text = "Total Junk: " + generatedJunk;
+        removedJunkText.text = "Removed Junk: " + removedJunk;
 
     }
 

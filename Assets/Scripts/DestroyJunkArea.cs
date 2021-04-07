@@ -15,7 +15,7 @@ public class DestroyJunkArea : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Plates") || other.gameObject.CompareTag("Teacups"))
         {
-            tableManager.removedJunk += 1;
+            tableManager.junkCollection();
             other.gameObject.SetActive(false);
         }
     }
