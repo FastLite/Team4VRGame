@@ -30,7 +30,7 @@ public class TableTrigger : MonoBehaviour
                 !other.GetComponent<Rigidbody>().isKinematic)
             {
                 tableManager.ChangePlateCount(1);
-                tableManager.TotalScore(Random.Range(25, 75));
+                tableManager.TotalScore(Random.Range(15, 30));
                 gameObject.GetComponent<Renderer>().enabled = false;
                 Instantiate(checkMarkParticle, gameObject.transform);
                 tableManager.plateIconPrefab.SetActive(false);
@@ -43,7 +43,7 @@ public class TableTrigger : MonoBehaviour
                 !other.GetComponent<Rigidbody>().isKinematic )
             {
                 tableManager.ChangeTeacupsCount(1);
-                tableManager.TotalScore(Random.Range(15, 45));
+                tableManager.TotalScore(Random.Range(5, 15));
                 gameObject.GetComponent<Renderer>().enabled = false;
                 Instantiate(checkMarkParticle, gameObject.transform);
                 tableManager.cupIconPrefab.SetActive(false);

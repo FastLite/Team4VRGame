@@ -12,8 +12,6 @@ public class TableManager : MonoBehaviour
     public int filledCups;
     public int currentRandomNumber;
     public int removedJunk;
-    public int plateScore;
-    public int cupScore;
     public float spacing = .25f;
     public int totalScore;
 
