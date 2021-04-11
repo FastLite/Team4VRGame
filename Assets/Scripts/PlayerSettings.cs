@@ -29,7 +29,7 @@ public class PlayerSettings : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        transform.localPosition = new Vector3(0, scale, -2.268);
+        transform.localPosition = new Vector3(0, scale, -2.268f);
         PlayerPrefs.SetFloat("Hight", scale);
     }
 }
