@@ -37,12 +37,14 @@ public class TableManager : MonoBehaviour
     public GameObject kettlePrefab;
     public GameObject PlaceGameCanvas;
     public GameObject JunkCollectingCanvas;
+    public GameObject Endgamebutton;
     
     //TextMeshPro
     public TextMeshProUGUI winText;
     public TextMeshProUGUI TotalScoreText;
     public TextMeshProUGUI removedJunkText;
     public TextMeshProUGUI totalJunkText;
+    public TextMeshProUGUI Redbuttontext;
 
     //SpawnPoints
     public List<Transform> triggersSpawnPonts ;
@@ -141,10 +143,15 @@ public class TableManager : MonoBehaviour
         if (plates == maxPlates && teacups == maxCups && cupsToFill == filledCups && objectiveType == OBJECTIVE_TYPE.Place) 
         {
             winText.text = "Successfully Completed the Task";
+            Endgamebutton.SetActive(true);
+            Redbuttontext.text = "Press the red button to continue";
+
         }
         else if (objectiveType == OBJECTIVE_TYPE.Clean && removedJunk == generatedJunk/2)
         {
             winText.text = "Successfully Completed the Task";
+            Endgamebutton.SetActive(true);
+            Redbuttontext.text = "Press the red button to continue";
         }
         
     }
