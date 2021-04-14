@@ -9,7 +9,6 @@ public class TableManager : MonoBehaviour
     //Variables
     public int plates;
     public int teacups;
-    public int filledCups;
     public int currentRandomNumber;
     public int removedJunk;
     public float spacing = .25f;
@@ -17,7 +16,6 @@ public class TableManager : MonoBehaviour
 
     
     private int maxPlates;
-    private int cupsToFill;
     private int maxCups;
     public int generatedJunk;
 
@@ -34,7 +32,6 @@ public class TableManager : MonoBehaviour
     public GameObject triggerPairPrefab;
     public GameObject platePrefab;
     public GameObject cupPrefab;
-    public GameObject kettlePrefab;
     public GameObject PlaceGameCanvas;
     public GameObject JunkCollectingCanvas;
     public GameObject Endgamebutton;
@@ -50,7 +47,6 @@ public class TableManager : MonoBehaviour
     public List<Transform> triggersSpawnPonts ;
     public List<Transform> platesSpawnPonts ;
     public Transform cupSpawnPoint ;
-    public Transform kettleSpawnPoint ;
     public Collider junkSpawnArea;
 
 
@@ -95,7 +91,6 @@ public class TableManager : MonoBehaviour
             currentRandomNumber = Random.Range(0,triggersSpawnPonts.Count);
             InstantiateTriggerPair(triggersSpawnPonts[currentRandomNumber]);
             triggersSpawnPonts.RemoveAt(currentRandomNumber);
-            Instantiate(kettlePrefab, kettleSpawnPoint);
         
             int pairsTorGenerate = Random.Range(0,triggersSpawnPonts.Count);
         
@@ -140,7 +135,7 @@ public class TableManager : MonoBehaviour
 
     void Update()
     {
-        if (plates == maxPlates && teacups == maxCups && cupsToFill == filledCups && objectiveType == OBJECTIVE_TYPE.Place) 
+        if (plates == maxPlates && teacups == maxCups && objectiveType == OBJECTIVE_TYPE.Place) 
         {
             winText.text = "Successfully Completed the Task";
             Endgamebutton.SetActive(true);
@@ -172,10 +167,7 @@ public class TableManager : MonoBehaviour
     {
         teacups += number; 
     }
-    public void ChangeFillCount(int number)
-    {
-        filledCups += number; 
-    }
+    
 
     public void TotalScore(int randomScore)
     {
