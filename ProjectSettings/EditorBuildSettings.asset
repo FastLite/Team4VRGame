@@ -11,12 +11,15 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/VladSceneVersion.unity
+  - enabled: 0
+    path: Assets/Scenes/Backup.unity
     guid: 23c167f795632ad4c950b0bf6bfc6756
   - enabled: 1
     path: Assets/Scenes/EndGameScene.unity
     guid: f062afe5847ee4b48ba56354777681d2
+  - enabled: 1
+    path: Assets/Scenes/VladSceneVersion.unity
+    guid: 53c11faedf4ea754aaa6dd58d90f2b47
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 66b2e991f24fd62499415d442ee0abc4,
       type: 2}
