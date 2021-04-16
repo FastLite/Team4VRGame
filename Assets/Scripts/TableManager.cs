@@ -76,7 +76,6 @@ public class TableManager : MonoBehaviour
         {
             objectiveType = OBJECTIVE_TYPE.Clean;
             JunkCollectingCanvas.SetActive(true);
-            totalJunkText.text = "Total Junk: " + generatedJunk;
             removedJunkText.text = "Removed Junk: " + removedJunk;
         }
     }
@@ -114,6 +113,8 @@ public class TableManager : MonoBehaviour
         }
         else
         {
+            totalJunkText.text = "Total Junk: " + generatedJunk;
+
             for (int i = 0; i < Random.Range(10,21); i++)
             {
                 Vector3 rndPoint3D = RandomPointInBounds(junkSpawnArea.bounds, 1f);
